@@ -12,9 +12,10 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
 }
 .banner{
-    padding: 38px 0 120px;
+    padding: 0 0 120px;
     background-image: url(../assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,23 +35,31 @@ body{
     left: 0;  
 } 
 .banner__container{
-    z-index: 1;
-    position: relative;
     align-items: center;
     text-align: center;
+}
+.header{
+ border-bottom: 1px solid #BABBC5;
+ padding: 38px 0 36px;
+ margin-bottom: 128px;
+ position: relative;
 }
 .header__content{
      display: flex;
      flex-wrap: nowrap;
      justify-content: space-between;
      align-items: center;
-     margin-bottom: 128px;
+}
+.header__wrapper-image{
+    max-width: 184px;
 }
 .logo{
     display: flex;
-    width: 184px;
-    height: 26px;
-    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    display: none;
 }
 .nav__link{
     font-size: 13px;
@@ -68,15 +77,7 @@ body{
 }
 .nav{
     display: flex;
-    gap: 30px;
-}
-.header__content::after{
-    content: '';
-    position: absolute;
-    border: 1px solid #BABBC5;
-    width: 1510px;
-    left: -170px;
-    top: 63px;
+    gap: 40px;
 }
 .banner__title{
     font-size: 64px;
@@ -193,7 +194,7 @@ body{
     .container{
     max-width: 1015px;}
     .banner{
-    padding: 38px 0 126px;}
+    padding: 0 0 126px;}
     .nav__link{
     font-size: 12px;
     line-height: 14px;}
@@ -207,8 +208,11 @@ body{
     margin-bottom: 89px;}
     .banner__btn{
     max-width: 314px;}
-    .header__content::after{
-    width: 1024px;}
+    .header{
+    margin-bottom: 157px;}
+    .nav{
+        gap: 25px;
+    }
     .testimonial__image{
     width: 482px;
     height: 332px;}
@@ -235,23 +239,21 @@ body{
     line-height: 21px;}
     .download{
     padding: 93px 0 78px}
-    .header__content{
-    margin-bottom: 157px;}
-    .logo{
-    width: 180px;
-    height: 26px;
+    .header__wrapper-image{
+    max-width: 180px;
     }
 }
 
-@media (max-width: 767px) and (min-width: 320px) {
+@media (max-width: 767px) {
     .banner{
-    padding: 21px 0 52px;
+    padding: 0 0 52px;
     align-items: center;}
     .banner__title{
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 41px;
-    width: 280px;}
+    width: 280px;
+    text-align: center;}
     .banner__text{
     font-size: 14px;
     line-height: 16px;
@@ -259,10 +261,15 @@ body{
     .banner__btn{
     max-width: 279px;
     padding: 14px 10px 16px;}
-    .header__content{
-    margin-bottom: 50px;}
+    .menu{
+    display: flex;}
+    .header{
+    padding: 21px 0;
+    margin-bottom: 50px;
+    border: none;}
     .testimonial__passege{
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+    text-align: center;}
     .testimonial{
     flex-direction: column;
     align-items: center;
@@ -270,13 +277,10 @@ body{
     .testimonial__image{
     width: 280px;
     height: 218px;}
-    .header__content::after{
-    display: none;}
     .nav{
     display: none;}
-    .logo{
-    width: 103px;
-    height: 14px;}
+    .header__wrapper-image{
+    max-width: 103px;}
     .testimonials{
     padding-bottom: 95px;}
     .download__title{
@@ -294,6 +298,6 @@ body{
     .download{
     padding: 64px 0 45px}
     .container{
-    max-width: 280px;
+    max-width: 310px;
     }
 }
