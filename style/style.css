@@ -48,7 +48,8 @@ body{
 }
 .logo{
     display: flex;
-    max-width: 184px;
+    width: 184px;
+    height: 26px;
     position: relative;
 }
 .nav__link{
@@ -58,6 +59,12 @@ body{
     color: #fff;
     font-weight: 700;
     text-decoration: none;
+}
+.nav__link:hover{
+    color: #BABBC5;
+}
+.nav__link:active{
+    color: #E71414;
 }
 .nav{
     display: flex;
@@ -96,4 +103,197 @@ body{
     border: 1px solid transparent;
     max-width: 370px;
     width: 100%;
+}
+.banner__btn:hover{
+    background-color: #E71414;
+}
+.banner__btn:active{
+  background: #FF4343;
+  box-shadow: 4px 4px 30px #FF4343;
+}
+.testimonials{
+    background-color: #5C3249;
+}
+.testimonial{
+    display: flex;
+    gap: 31px;
+    align-items: center;
+}
+.testimonial__passege{
+    font-size: 36px;
+    line-height: 49px;
+    font-style: italic;
+    color: #fff;
+    font-weight: 400;
+    font-family: "Cardo", serif;
+    text-transform: capitalize;
+    margin-bottom: 34px;
+}
+.testimonial__text{
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.testimonial__image{
+    width: 570px;
+    height: 490px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.download{
+    background-color: #fff;
+    padding: 132px 0 114px;
+}
+.download__content{
+  text-align: center;
+}
+.download__title{
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 22px;
+    text-transform: capitalize;
+}
+.download__text{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 50px;
+}
+.download__btn{
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    background-color: #FF4343;
+    padding: 24px 10px 26px;
+    border: 1px solid transparent;
+    max-width: 370px;
+    width: 100%;
+}
+.download__btn:hover{
+  background-color: #E71414;
+}
+.download__btn:active{
+  background: #FF4343;
+  box-shadow: 4px 4px 30px #FF4343;
+}
+@media (max-width: 1024px){
+    .container{
+    max-width: 1015px;}
+    .banner{
+    padding: 38px 0 126px;}
+    .nav__link{
+    font-size: 12px;
+    line-height: 14px;}
+    .banner__title{
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 62px;}
+    .banner__text{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 89px;}
+    .banner__btn{
+    max-width: 314px;}
+    .header__content::after{
+    width: 1024px;}
+    .testimonial__image{
+    width: 482px;
+    height: 332px;}
+    .testimonial__passege{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;}
+    .testimonial__text{
+    font-size: 12px;
+    line-height: 14px;}
+   .testimonial{
+    gap: 19px;}
+    .download__title{
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 20px;}
+    .download__text{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 46px;}
+    .download__btn{
+    max-width: 313px;
+    font-size: 18px;
+    line-height: 21px;}
+    .download{
+    padding: 93px 0 78px}
+    .header__content{
+    margin-bottom: 157px;}
+    .logo{
+    width: 180px;
+    height: 26px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .banner{
+    padding: 21px 0 52px;
+    align-items: center;}
+    .banner__title{
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 41px;
+    width: 280px;}
+    .banner__text{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 59px;}
+    .banner__btn{
+    max-width: 279px;
+    padding: 14px 10px 16px;}
+    .header__content{
+    margin-bottom: 50px;}
+    .testimonial__passege{
+    margin-bottom: 15px;}
+    .testimonial{
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;}
+    .testimonial__image{
+    width: 280px;
+    height: 218px;}
+    .header__content::after{
+    display: none;}
+    .nav{
+    display: none;}
+    .logo{
+    width: 103px;
+    height: 14px;}
+    .testimonials{
+    padding-bottom: 95px;}
+    .download__title{
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 11px;}
+    .download__text{
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 13px;}
+    .download__btn{
+    max-width: 280px;
+    font-size: 18px;
+    line-height: 21px;}
+    .download{
+    padding: 64px 0 45px}
+    .container{
+    max-width: 280px;
+    }
 }
