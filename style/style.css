@@ -1,302 +1,411 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: "Raleway", sans-serif;
+body {
+  font-family: "Raleway", sans-serif;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    position: relative;
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1015px;
+  }
 }
-.banner{
-    padding: 0 0 120px;
-    background-image: url(../assets/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
-    position: relative;
+@media (max-width: 767px) {
+  .container {
+    max-width: 310px;
+  }
 }
-.banner::before{ 
-    content: '';
-    display: block;
-    position: absolute;
-    background: #252B49;
-    opacity: 0.8;
-    mix-blend-mode: normal;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;  
-} 
-.banner__container{
+
+.banner {
+  padding: 0 0 120px;
+  background-image: url(../assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.banner:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #252B49;
+  opacity: 0.8;
+  mix-blend-mode: normal;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .banner {
+    padding: 0 0 126px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    padding: 0 0 52px;
     align-items: center;
-    text-align: center;
+  }
 }
-.header{
- border-bottom: 1px solid #BABBC5;
- padding: 38px 0 36px;
- margin-bottom: 128px;
- position: relative;
-}
-.header__content{
-     display: flex;
-     flex-wrap: nowrap;
-     justify-content: space-between;
-     align-items: center;
-}
-.header__image{
-    width: 100%;
-}
-.logo{
-    display: flex;
-    max-width: 184px;
-}
-.menu{
-    display: none;
-}
-.nav__link{
-    font-size: 13px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-}
-.nav__link:hover{
-    color: #BABBC5;
-}
-.nav__link:active{
-    color: #E71414;
-}
-.nav{
-    display: flex;
-    gap: 40px;
-}
-.banner__title{
-    font-size: 64px;
-    line-height: 75px;
-    font-weight: 900;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 31px;
-}
-.banner__text{
-    font-size: 24px;
-    line-height: 28px;
-    color: #fff;
-    margin-bottom: 79px;
-}
-.banner__btn{
-     font-size: 24px;
-    line-height: 28px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 900;
-    background-color: #FF4343;
-    padding: 25px 10px;
-    border: 1px solid transparent;
-    max-width: 370px;
-    width: 100%;
-}
-.banner__btn:hover{
-    background-color: #E71414;
-}
-.banner__btn:active{
-  background: #FF4343;
-  box-shadow: 4px 4px 30px #FF4343;
-}
-.testimonials{
-    background-color: #5C3249;
-}
-.testimonial{
-    display: flex;
-    gap: 31px;
-    align-items: center;
-}
-.testimonial__passege{
-    font-size: 36px;
-    line-height: 49px;
-    font-style: italic;
-    color: #fff;
-    font-weight: 400;
-    font-family: "Cardo", serif;
-    text-transform: capitalize;
-    margin-bottom: 34px;
-}
-.testimonial__text{
-    font-size: 13px;
-    line-height: 15px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-}
-.testimonial__image{
-    width: 570px;
-    height: 490px;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-.image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.download{
-    background-color: #fff;
-    padding: 132px 0 114px;
-}
-.download__content{
+.banner__container {
+  align-items: center;
   text-align: center;
 }
-.download__title{
-    font-size: 30px;
-    line-height: 35px;
-    color: #000;
-    font-weight: 500;
-    margin-bottom: 22px;
-    text-transform: capitalize;
+.banner__title {
+  font-size: 64px;
+  line-height: 75px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 31px;
 }
-.download__text{
-    text-transform: uppercase;
+@media (max-width: 1024px) {
+  .banner__title {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+    margin-bottom: 62px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 900;
+    margin-bottom: 41px;
+    width: 280px;
+    text-align: center;
+  }
+}
+.banner__text {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 79px;
+}
+@media (max-width: 1024px) {
+  .banner__text {
     font-size: 18px;
     line-height: 21px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 50px;
+    font-weight: 400;
+    margin-bottom: 89px;
+  }
 }
-.download__btn{
-    font-size: 24px;
-    line-height: 28px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 900;
-    background-color: #FF4343;
-    padding: 24px 10px 26px;
-    border: 1px solid transparent;
-    max-width: 370px;
-    width: 100%;
+@media (max-width: 767px) {
+  .banner__text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 59px;
+  }
 }
-.download__btn:hover{
+.banner__btn {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #FF4343;
+  padding: 25px 10px;
+  border: 1px solid transparent;
+  max-width: 370px;
+  width: 100%;
+}
+.banner__btn:hover {
   background-color: #E71414;
 }
-.download__btn:active{
+.banner__btn:active {
   background: #FF4343;
   box-shadow: 4px 4px 30px #FF4343;
 }
-@media (max-width: 1024px){
-    .container{
-    max-width: 1015px;}
-    .banner{
-    padding: 0 0 126px;}
-    .nav__link{
-    font-size: 12px;
-    line-height: 14px;}
-    .banner__title{
-    font-size: 48px;
-    line-height: 56px;
-    margin-bottom: 62px;}
-    .banner__text{
-    font-size: 18px;
-    line-height: 21px;
-    margin-bottom: 89px;}
-    .banner__btn{
-    max-width: 314px;}
-    .header{
-    margin-bottom: 157px;}
-    .nav{
-        gap: 25px;
-    }
-    .testimonial__image{
-    width: 482px;
-    height: 332px;}
-    .testimonial__passege{
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 8px;}
-    .testimonial__text{
-    font-size: 12px;
-    line-height: 14px;}
-   .testimonial{
-    gap: 19px;}
-    .download__title{
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 20px;}
-    .download__text{
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 46px;}
-    .download__btn{
-    max-width: 313px;
-    font-size: 18px;
-    line-height: 21px;}
-    .download{
-    padding: 93px 0 78px}
-    .logo{
-    max-width: 180px;
-    }
+@media (max-width: 1024px) {
+  .banner__btn {
+    max-width: 314px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__btn {
+    max-width: 279px;
+    padding: 14px 10px 16px;
+  }
 }
 
+.header {
+  border-bottom: 1px solid #BABBC5;
+  padding: 38px 0 36px;
+  margin-bottom: 128px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .header {
+    margin-bottom: 157px;
+  }
+}
 @media (max-width: 767px) {
-    .banner{
-    padding: 0 0 52px;
-    align-items: center;}
-    .banner__title{
-    font-size: 36px;
-    line-height: 42px;
-    margin-bottom: 41px;
-    width: 280px;
-    text-align: center;}
-    .banner__text{
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 59px;}
-    .banner__btn{
-    max-width: 279px;
-    padding: 14px 10px 16px;}
-    .menu{
-    display: flex;}
-    .header{
+  .header {
     padding: 21px 0;
     margin-bottom: 50px;
-    border: none;}
-    .testimonial__passege{
-    margin-bottom: 15px;
-    text-align: center;}
-    .testimonial{
+    border: none;
+  }
+}
+.header__content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__image {
+  width: 100%;
+}
+.header__logo {
+  display: flex;
+  max-width: 184px;
+}
+@media (max-width: 1024px) {
+  .header__logo {
+    max-width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .header__logo {
+    max-width: 103px;
+  }
+}
+.header__menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header__menu {
+    display: flex;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 1024px) {
+  .nav {
+    gap: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
+.nav__link {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .nav__link {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+  }
+}
+.nav__link:hover {
+  color: #BABBC5;
+}
+.nav__link:active {
+  color: #E71414;
+}
+
+.testimonials {
+  background-color: #5C3249;
+}
+@media (max-width: 767px) {
+  .testimonials {
+    padding-bottom: 95px;
+  }
+}
+
+.testimonial {
+  display: flex;
+  gap: 31px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .testimonial {
+    gap: 19px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial {
     flex-direction: column;
     align-items: center;
-    gap: 25px;}
-    .testimonial__image{
+    gap: 25px;
+  }
+}
+.testimonial__passege {
+  font-size: 36px;
+  line-height: 49px;
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  font-family: "Cardo", serif;
+  text-transform: capitalize;
+  margin-bottom: 34px;
+}
+@media (max-width: 1024px) {
+  .testimonial__passege {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial__passege {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.testimonial__text {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .testimonial__text {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+  }
+}
+.testimonial__image {
+  width: 570px;
+  height: 490px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (max-width: 1024px) {
+  .testimonial__image {
+    width: 482px;
+    height: 332px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial__image {
     width: 280px;
-    height: 218px;}
-    .nav{
-    display: none;}
-    .logo{
-    max-width: 103px;}
-    .testimonials{
-    padding-bottom: 95px;}
-    .download__title{
+    height: 218px;
+  }
+}
+.testimonial .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.download {
+  background-color: #fff;
+  padding: 132px 0 114px;
+}
+@media (max-width: 1024px) {
+  .download {
+    padding: 93px 0 78px;
+  }
+}
+@media (max-width: 767px) {
+  .download {
+    padding: 64px 0 45px;
+  }
+}
+.download__content {
+  text-align: center;
+}
+.download__title {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 22px;
+  text-transform: capitalize;
+}
+@media (max-width: 1024px) {
+  .download__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .download__title {
     font-size: 18px;
     line-height: 21px;
-    margin-bottom: 11px;}
-    .download__text{
+    font-weight: 500;
+    margin-bottom: 11px;
+  }
+}
+.download__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .download__text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 767px) {
+  .download__text {
     font-size: 13px;
     line-height: 15px;
-    margin-bottom: 13px;}
-    .download__btn{
-    max-width: 280px;
-    font-size: 18px;
-    line-height: 21px;}
-    .download{
-    padding: 64px 0 45px}
-    .container{
-    max-width: 310px;
-    }
+    font-weight: 700;
+    margin-bottom: 13px;
+  }
 }
+.download__btn {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #FF4343;
+  padding: 24px 10px 26px;
+  border: 1px solid transparent;
+  max-width: 370px;
+  width: 100%;
+}
+.download__btn:hover {
+  background-color: #E71414;
+}
+.download__btn:active {
+  background: #FF4343;
+  box-shadow: 4px 4px 30px #FF4343;
+}
+@media (max-width: 1024px) {
+  .download__btn {
+    max-width: 313px;
+  }
+}
+@media (max-width: 767px) {
+  .download__btn {
+    max-width: 280px;
+  }
+}/*# sourceMappingURL=style.css.map */
