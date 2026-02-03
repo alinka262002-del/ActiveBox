@@ -580,16 +580,16 @@ body{
 
  &__container{
    display: grid;
-   grid-template-columns: repeat(3, 370px);
+   grid-template-columns: repeat(3, 1fr);
    gap:30px;
    position: relative;
 
  @media (max-width: $tablet){
     gap: 20px;
-   grid-template-columns: repeat(3, 315px);}
+   grid-template-columns: repeat(3, 1fr);}
 
  @media (max-width: $mobile){
-    grid-template-columns: 280px;
+    grid-template-columns: 1fr;
     justify-content: center;}}
 
  &__special{
@@ -608,7 +608,7 @@ body{
     margin-bottom: 16px;
    @include font(14px, 16px, 700);}
 @media (max-width: $mobile){
-    margin-bottom: 34px;}}
+    margin-bottom: 38px;}}
 
  &__text{
    @include font(18px, 21px);
@@ -627,9 +627,13 @@ body{
    color: #808080;}
 
  &__text-special{
-   @include font(14px, 16px);
+   @include font(18px, 21px);
    color: #fff;
-   text-transform: capitalize;}
+   text-transform: capitalize;
+
+ @media (max-width: $tablet){
+   @include font(14px, 16px);
+   }}
 
  &__wrapper-media{
     display: grid;
