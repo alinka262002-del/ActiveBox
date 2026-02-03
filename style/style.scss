@@ -14,21 +14,17 @@ $mobile: 767px;
 
 body{
     font-family: "Raleway", sans-serif;
+
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    position: relative;
-
- @media (max-width: $tablet){
-    max-width: 1015px;}
-
- @media (max-width: $mobile){
-    max-width: 310px;}
+    text-align: center;
+    
 }
 .banner{
-    padding: 0 0 120px;
+    padding: 230px 0 120px;
     background-image: url(../assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,14 +44,14 @@ body{
     left: 0; } 
 
  @media (max-width: $tablet){
-    padding: 0 0 126px;}
+    padding: 257px 0 126px;}
  @media (max-width: $mobile){
-    padding: 0 0 52px;
-    align-items: center;}
+    padding: 106px 0 52px;
+    }
 
  &__container{
-    align-items: center;
-    text-align: center;}
+    text-align: center;
+    position: relative;}
 
  &__title{
     @include font(64px, 75px, 900);
@@ -73,8 +69,6 @@ body{
     @include font(36px, 42px, 900);
    
     margin-bottom: 41px;
-    width: 280px;
-    text-align: center;
 }}
 
  &__text{
@@ -121,15 +115,13 @@ body{
 .header{
  border-bottom: 1px solid #BABBC5;
  padding: 38px 0 36px;
- margin-bottom: 128px;
- position: relative;
-
- @media (max-width: $tablet){
-   margin-bottom: 157px;}
+ position: absolute;
+ left: 0;
+ top: 0;
+ width: 100%;
 
  @media (max-width: $mobile){
     padding: 21px 0;
-    margin-bottom: 50px;
     border: none;}
 
  &__content{
@@ -191,7 +183,6 @@ body{
 .testimonial{
     display: flex;
     gap: 31px;
-    align-items: center;
 
     @media (max-width: $tablet){
     gap: 19px;}
@@ -226,22 +217,36 @@ body{
 
     @media (max-width: $tablet){
     @include font(12px, 14px, 700);}}
-
- &__image{
-    width: 570px;
-    height: 490px;
-    overflow: hidden;
-    flex-shrink: 0;
+ &__wrapper{
+    flex: 0 1 570px;
+    padding: 116px 0;
+    align-self: center;
+    text-align: left;
 
     @media (max-width: $tablet){
-    width: 482px;
-    height: 332px;}
+    padding: 110px 0 103px;
+    flex: 1;}
 
     @media (max-width: $mobile){
-    width: 280px;
-    height: 218px;}}
+    flex: 1;
+    padding: 0;}}
 
-    .image{
+ &__wrapper-image{
+    display: flex;
+    flex: 0 1 570px;
+    
+    @media (max-width: $tablet){
+    flex: 1;
+    aspect-ratio: 482 / 332;
+    overflow: hidden
+   }
+
+    @media (max-width: $mobile){
+    flex: 1;
+    aspect-ratio: 280 / 218;
+    overflow: hidden;}}
+
+ &__image{
     width: 100%;
     height: 100%;
     object-fit: cover;}
@@ -256,9 +261,6 @@ body{
     @media (max-width: $mobile){
     padding: 64px 0 45px;}
 
- &__content{
-  text-align: center;}
-
  &__title{
     @include font(30px, 35px, 500);
    
@@ -269,7 +271,7 @@ body{
  @media (max-width: $tablet){
     @include font(24px, 28px, 500);
 
-    margin-bottom: 20px;}
+    margin-bottom: 21px;}
 
  @media (max-width: $mobile){
     @include font(18px, 21px, 500);
@@ -311,8 +313,343 @@ body{
   box-shadow: 4px 4px 30px #FF4343;}
 
   @media (max-width: $tablet){
-   max-width: 313px;}
+   max-width: 313px;
+  @include font(18px, 21px, 900);}
 
   @media (max-width: $mobile){
-    max-width: 280px;}}
+    max-width: 280px;
+   }}
+}
+.features{
+   padding: 110px 0 116px;
+   background-color: #fff;
+
+   @media (max-width: $tablet){
+      padding: 78px 0 80px;
+   }
+
+   @media (max-width: $mobile){
+      padding: 40px 0 35px;
+   }
+
+   &__container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 31px;
+      row-gap: 88px;
+
+    @media (max-width: $tablet){
+      column-gap: 20px;
+      row-gap: 50px;
+    }
+
+    @media (max-width: $mobile){
+      row-gap: 42px;
+      grid-template-columns: 1fr;
+    }}
+   &__wrapper-icon{
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: contain;
+      margin-bottom: 51px;
+
+    @media (max-width: $tablet){
+      max-width: 85px;
+      max-height: 85px;
+      margin-bottom: 43px;
+    }
+
+    @media (max-width: $mobile){
+      max-width: 75px;
+      max-height: 75px;
+      margin-bottom: 37px;
+    }
+   }
+   &__icon{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;  
+   }
+   &__title{
+    @include font(24px, 28px, 900);
+    color: #000;
+    margin-bottom: 42px;
+
+    @media (max-width: $tablet){
+    @include font(18px, 21px, 900);
+    margin-bottom: 24px;
+    }
+
+    @media (max-width: $mobile){
+      margin-bottom: 9px;
+    }
+   }
+   &__text{
+      color: #6C7279;
+      @include font(18px, 21px);
+
+    @media (max-width: $tablet){
+      @include font(14px, 16px);
+    }}
+   &__card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+}
+.works{
+   &__container{
+      max-width: 1540px;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+   @media (max-width: $tablet){
+    gap: 2px;
+    }
+   @media (max-width: $mobile){
+   grid-template-columns: repeat(2, 1fr);
+    }}
+}
+.work{
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(255, 67, 67, 0.8);
+    border: 2px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:active{
+      background: rgba(185, 12, 12, 0.8);
+      border: 2px solid #FFFFFF;}
+   }
+   &__title{
+    @include font(24px, 28px, 900);
+    color: #fff;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+
+   @media (max-width: $tablet){
+    @include font(18px, 21px, 900);
+     margin-bottom: 23px;
+    }
+
+   @media (max-width: $mobile){
+     margin-bottom: 7px;
+    }}
+   &__text{
+    @include font(18px, 21px);
+    color: #fff;
+
+   @media (max-width: $tablet){
+    @include font(14px, 16px);
+    }}
+}
+.personalities{
+   padding: 114px 0;
+   text-align: left;
+   
+   @media (max-width: $tablet){
+    padding: 78px 0;
+   }
+   @media (max-width: $mobile){
+    padding: 35px 0;
+    }
+
+   &__container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      text-align: left;
+   @media (max-width: $tablet){
+    gap: 25px;
+   }
+   @media (max-width: $mobile){
+    grid-template-columns: 1fr;
+    }}
+}
+.person{
+    max-width: 270px;
+    
+
+   @media (max-width: $tablet){
+   max-width: 227px;
+  }
+   @media (max-width: $mobile){
+    max-width: 280px;
+   }
+   &__card{
+      margin-bottom: 30px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      width: 100%;
+      object-position: top;
+    
+   @media (max-width: $tablet){
+     margin-bottom: 25px;
+   }}
+  
+   &__title{
+      margin-bottom: 5px;
+      @include font(24px, 28px, 700);
+      color: #000;
+      text-transform: capitalize;
+
+   @media (max-width: $tablet){
+    margin-bottom: 4px;
+    @include font(18px, 21px, 700);
+   }}
+   &__subtitle{
+      margin-bottom: 18px;
+      @include font(18px, 21px);
+      color: #FF4343;
+      text-transform: uppercase;
+
+   @media (max-width: $tablet){
+      margin-bottom: 22px;
+      @include font(14px, 16px);
+   }
+   @media (max-width: $mobile){
+     margin-bottom: 38px;
+    }}
+   &__text{
+      margin-bottom: 38px;
+      @include font(18px, 21px);
+      color: #6C7279;
+
+   @media (max-width: $tablet){
+    margin-bottom: 39px;
+      @include font(14px, 16px);
+   }
+   @media (max-width: $mobile){
+    margin-bottom: 55px;
+    }}
+   &__wrapper-media{
+      grid-template-columns: repeat(3, 39px);
+      gap: 6px; ;
+    }
+}
+.footer{
+ background-color: #353C65;
+ padding: 71px 0 24px;
+ position: relative;
+
+ @media (max-width: $tablet){
+    padding: 46px 0 15px;}
+ @media (max-width: $mobile){
+   padding: 34px 0 28px;
+ }
+
+ &::before{
+   content: '';
+   display: block;
+   position: absolute;
+   background-color: #252B49;
+   max-height: 90px;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   bottom: 0;
+
+ @media (max-width: $tablet){
+    max-height: 60px;}
+ @media (max-width: $mobile){
+   max-height: 90px;}}
+
+ &__container{
+   display: grid;
+   grid-template-columns: repeat(3, 370px);
+   gap:30px;
+   position: relative;
+
+ @media (max-width: $tablet){
+    gap: 20px;
+   grid-template-columns: repeat(3, 315px);}
+
+ @media (max-width: $mobile){
+    grid-template-columns: 280px;
+    justify-content: center;}}
+
+ &__special{
+   grid-column: 2/3;
+
+@media (max-width: $mobile){
+    grid-column: 1;}}
+
+ &__title{
+   color: #fff;
+   @include font(18px, 21px, 700);
+   margin-bottom: 29px;
+   text-transform: uppercase;
+
+@media (max-width: $tablet){
+    margin-bottom: 16px;
+   @include font(14px, 16px, 700);}
+@media (max-width: $mobile){
+    margin-bottom: 34px;}}
+
+ &__text{
+   @include font(18px, 21px);
+   color: #fff;
+   text-transform: capitalize;
+   margin-bottom: 67px;
+
+ @media (max-width: $tablet){
+   @include font(14px, 16px);
+   margin-bottom: 43px;}
+ @media (max-width: $mobile){
+
+ }}
+
+ &__color{
+   color: #808080;}
+
+ &__text-special{
+   @include font(14px, 16px);
+   color: #fff;
+   text-transform: capitalize;}
+
+ &__wrapper-media{
+    display: grid;
+    grid-template-columns: repeat(3, 39px);
+    gap: 27px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 0;
+
+    @media (max-width: $tablet){
+     grid-template-columns: repeat(3, 33px);
+     gap: 23px;
+     padding: 16px 0 0;}
+    @media (max-width: $mobile){
+      margin-bottom: 39px;
+      padding: 0;
+    }}
+   &__media{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 }
