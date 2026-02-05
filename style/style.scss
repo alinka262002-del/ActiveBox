@@ -595,10 +595,11 @@ body{
     justify-content: center;
     opacity: 0;
     padding: 5px;
-
+    transform: translateY(60%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
     &:hover {
       opacity: 1;
-      animation: scale-up-ver-bottom 0.3s linear both;}
+      transform: translateY(0);}
     &:active{
       background: rgba(185, 12, 12, 0.8);
       border: 2px solid #FFFFFF;  

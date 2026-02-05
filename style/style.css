@@ -716,10 +716,12 @@ body {
   justify-content: center;
   opacity: 0;
   padding: 5px;
+  transform: translateY(60%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .work__content:hover {
   opacity: 1;
-  animation: scale-up-ver-bottom 0.3s linear both;
+  transform: translateY(0);
 }
 .work__content:active {
   background: rgba(185, 12, 12, 0.8);
