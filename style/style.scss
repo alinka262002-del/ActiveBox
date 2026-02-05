@@ -845,15 +845,3 @@ body{
     max-width: 345px;}
    @media (max-width: $mobile){
     max-width: 310px;}}
-.ex{
-    will-change: opacity, transform;
-    opacity: 0;
-    transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-}
-.hello{
-    will-change: opacity, transform;
-    opacity: 0;
-    transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-}
