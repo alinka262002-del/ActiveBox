@@ -46,8 +46,6 @@ $activLink: #E71414;
   }
 }
 
-
-
 @keyframes tilt-in-tl {
   0% {
     transform: rotateY(35deg) rotateX(20deg) translate(-250px, -250px) skew(12deg, 15deg);
@@ -129,7 +127,6 @@ $activLink: #E71414;
     background: $bg-btn;
   }
 }
-
 
 
 body{
@@ -217,7 +214,7 @@ body{
     width: 100%;
     border-radius: 2px;
     transition: all 0.3s linear;
-    animation: color-change-3x 1s cubic-bezier(0, 0, 0.59, 1.1) alternate both;
+    animation: color-change-3x 0.6s cubic-bezier(0, 0, 0.59, 1.1) alternate both;
  &:hover{
     background-color:$bg-btnHover;
     border-radius: 8px;
@@ -276,6 +273,12 @@ body{
 
  @media (max-width: $mobile){
     display: flex;}}
+    
+}
+.menu{
+   width: 25px;
+	height: 18px;
+	cursor: pointer;
 }
 .nav{
     display: flex;
@@ -305,21 +308,20 @@ body{
     color: $activLink;}
  }
 }
-.testimonials{
-    background-color:$bgTestimonials;
- 
-   @media (max-width: $mobile){
-    padding-bottom: 95px;}}
 .testimonial{
     display: flex;
     gap: 31px;
+    padding: 0 15px;
+    background-color:$bgTestimonials;
+    justify-content: center;
 
     @media (max-width: $tablet){
     gap: 19px;}
     @media (max-width: $mobile){
     flex-direction: column;
     align-items: center;
-    gap: 25px;}
+    gap: 25px;
+    padding-bottom: 95px;}
 
  &__passege{
     @include font(36px, 49px,);
@@ -379,6 +381,45 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;}
+}
+.swiper{
+  padding: 0 0 45px;
+  max-width: 1510px;
+
+  @media (max-width: $tablet){
+    padding: 0 0 33px;}
+ @media (max-width: $mobile){
+   padding: 0 0 32px;
+ }
+
+   &-pagination{
+   bottom: 0;
+   display: flex;
+   column-gap: 25px;
+   justify-content: center;
+
+   @media (max-width: $tablet){
+    column-gap: 25.5px;}
+   @media (max-width: $mobile){
+     column-gap: 20px;
+ }
+
+    &-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #7E5D6F;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 !important;
+    opacity: 1;
+
+    @media (max-width: $tablet){
+    width: 9px;
+    height: 9px;
+ }
+  
+      &-active{
+      background-color: #7E5D6F;}}}
 }
 .download{
     background-color:$bgDownload;
@@ -884,6 +925,7 @@ body{
      @media (max-width: $tablet){
     width: 33px;
      height: 33px;
+     padding: 8px 0 9px;
    }
      @media (max-width: $mobile){
      width: 39px;
