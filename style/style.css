@@ -140,6 +140,7 @@ body {
 .banner__container {
   text-align: center;
   position: relative;
+  transition: opacity 0.3s;
 }
 .banner__title {
   font-size: 64px;
@@ -281,6 +282,19 @@ body {
   }
 }
 
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav {
+  transform: translateX(0);
+}
+
+#menu-toggle:checked ~ .banner__container {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .menu {
   width: 25px;
   height: 18px;
@@ -298,7 +312,14 @@ body {
 }
 @media (max-width: 767px) {
   .nav {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 108px 20px 171px;
+    gap: 49px;
+    transform: translateX(100%);
   }
 }
 .nav__link {
@@ -314,6 +335,13 @@ body {
   .nav__link {
     font-size: 12px;
     line-height: 14px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 767px) {
+  .nav__link {
+    font-size: 13px;
+    line-height: 15px;
     font-weight: 700;
   }
 }

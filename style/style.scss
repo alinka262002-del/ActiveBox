@@ -166,7 +166,8 @@ body{
 
  &__container{
     text-align: center;
-    position: relative;}
+    position: relative;
+    transition: opacity 0.3s;}
 
  &__title{
     @include font(64px, 75px, 900);
@@ -275,6 +276,16 @@ body{
     display: flex;}}
     
 }
+#menu-toggle{
+   display: none;
+}
+#menu-toggle:checked ~ .nav{
+ transform: translateX(0);
+}
+#menu-toggle:checked ~ .banner__container{
+ opacity: 0;
+ transition: opacity 0.3s;
+}
 .menu{
    width: 25px;
 	height: 18px;
@@ -288,8 +299,16 @@ body{
     gap: 25px;}
 
  @media (max-width: $mobile){
-    display: none;
-   }
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 108px 20px 171px;
+    gap: 49px;
+    transform: translateX(100%);
+   
+}
 
  &__link{
     @include font(13px, 15px, 700);
@@ -300,6 +319,8 @@ body{
 
  @media (max-width: $tablet){
     @include font(12px, 14px, 700);}
+ @media (max-width: $mobile){
+    @include font(13px, 15px, 700);}
 
  &:hover{
     color: $hoverLink;}
