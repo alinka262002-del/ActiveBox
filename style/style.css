@@ -279,6 +279,8 @@ body {
 @media (max-width: 767px) {
   .header__menu {
     display: flex;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -286,7 +288,7 @@ body {
   display: none;
 }
 
-#menu-toggle:checked ~ .nav {
+#menu-toggle:checked ~ .header .nav {
   transform: translateX(0);
 }
 
